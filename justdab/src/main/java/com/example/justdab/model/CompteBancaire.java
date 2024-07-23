@@ -15,6 +15,12 @@ public class CompteBancaire {
     @JoinColumn(name = "client_id")
     private Client client;
 
+    public CompteBancaire(Double solde) {
+        this.solde = solde;
+
+
+    }
+
     // Getters et setters
 
     public Long getId() {

@@ -1,6 +1,9 @@
 package com.example.justdab.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.List;
 
 @Entity
@@ -13,7 +16,11 @@ public class User {
     private String nom;
     private String email;
 
-    //getters et setters
+    public User(String nom, String email) {
+        this.nom = nom;
+        this.email = email;
+    }
+//getters et setters
 
 
     public Long getId() {
