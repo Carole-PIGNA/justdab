@@ -3,7 +3,6 @@ package com.example.justdab.configuration;
 import com.example.justdab.model.Client;
 import com.example.justdab.model.CompteBancaire;
 import com.example.justdab.model.Conseiller;
-import com.example.justdab.model.User;
 import com.example.justdab.repository.ClientRepository;
 import com.example.justdab.repository.CompteBancaireRepository;
 import com.example.justdab.repository.ConseillerRepository;
@@ -37,7 +36,7 @@ public class DBConfig {
             );
             Client client2 = new Client(
 
-                    "Alice2 Dupont", "alice.dupont2@example.com", conseiller2
+                    "Marie Dupont", "alice.dupont2@example.com", conseiller2
             );
             clientRepository.saveAll(
                     List.of(client1,client2)
@@ -47,11 +46,11 @@ public class DBConfig {
 
             CompteBancaire compte1 = new CompteBancaire(
 
-                    10.000
+                    10.000, 20L
             );
             CompteBancaire compte2 = new CompteBancaire(
 
-                    300.0
+                    300.0, 30L
             );
             compteBancaireRepository.saveAll(
                     List.of(compte1,compte2)

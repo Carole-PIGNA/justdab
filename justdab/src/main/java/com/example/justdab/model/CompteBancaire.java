@@ -7,16 +7,30 @@ import java.util.List;
 @Entity
 public class CompteBancaire {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(
+            name = "client_sequence",
+            sequenceName = "client_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            generator = "client_sequence",
+            strategy = GenerationType.SEQUENCE
+    )
+    @Column(updatable = false)
     private Long id;
     private Double solde;
 
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(referencedColumnName = "id",name = "client_id")
     private Client client;
 
-    public CompteBancaire(Double solde) {
+
+    public CompteBancaire() {
+    }
+
+    public CompteBancaire(Double solde, Long id) {
         this.solde = solde;
+        this.id = id;
 
 
     }

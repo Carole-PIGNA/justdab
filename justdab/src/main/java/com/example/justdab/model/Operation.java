@@ -15,7 +15,7 @@ public class Operation {
     private LocalDateTime dateOperation;
 
     @ManyToOne
-    @JoinColumn(name = "compteBancaire_id")
+    @JoinColumn(name = "compte_bancaire_id")
     private CompteBancaire compteBancaire;
 
     public Operation() {}

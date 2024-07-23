@@ -1,13 +1,11 @@
 package com.example.justdab.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 import java.util.List;
 
 @Entity
-public class Client extends User {
+public class Client extends UserDemo {
 
    @OneToMany(mappedBy = "client")
     private List<CompteBancaire> comptesBancaires;

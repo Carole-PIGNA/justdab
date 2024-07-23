@@ -1,14 +1,11 @@
 package com.example.justdab.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
-public class Conseiller extends User {
+public class Conseiller extends UserDemo {
 
     @OneToMany(targetEntity = Client.class)
     private List<Client> clients;
